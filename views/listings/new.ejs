@@ -1,0 +1,123 @@
+<% layout ("/layouts/boilerplates") %>
+<body>
+
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3>
+        Explore the journey in detail !
+      </h3>
+      <br>
+     <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+       <div class="mb-3">
+          <label class="form-label" for="title"> 
+            Title 
+          </label>
+          <input name="listing[title]" 
+           placeholder="A weekend in Miami..." 
+           type="text" 
+           class="form-control" 
+           required
+          />
+          <div class="valid-feedback">
+            Title looks good
+          </div>
+          <div class="invalid-feedback">
+            Title is required
+          </div>
+       </div>
+       
+       <div class="mb-3">
+         <label for="description" class="form-label">
+           Description 
+         </label>
+         <textarea name="listing[description]" class="form-control" placeholder="quality time,relaxations,surrounded by beach" required></textarea>
+         <div class="valid-feedback">
+           <i class="fa-solid fa-check"></i>
+         </div>
+         <div class="invalid-feedback">
+           Please enter short description
+         </div>
+       </div>
+
+       <div class="mb-3">
+         <label class="form-label " for="image"> Upload listing Image </label>
+          <input
+           name="listing[image]"
+           type="file"
+           class="form-control"
+           required
+          />
+       </div>
+
+
+       <div class="row">
+       
+        <div class="mb-3 col-md-4">
+          <label class="form-label" for="price"> 
+            Enter your Price 
+          </label>
+          <input 
+            name="listing[price]" 
+            placeholder="C$ 50" 
+            type="text" 
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="invalid-feedback">
+            Price should be valid
+          </div>
+        </div>
+          
+        <div class="mb-3 col-md-8">
+          <label class="form-label" for="location"> 
+            Enter your Location
+          </label>
+          <input
+            name="listing[location]"
+            placeholder="Miami"
+            type="text" 
+            class="form-control"
+            required
+           />
+          <div class="valid-feedback">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="invalid-feedback">
+            location should be valid
+          </div>
+       </div>
+
+       <div class="mb-3">
+         <label class="form-label" for="country"> 
+           Enter your Country here 
+         </label>
+         <input 
+           name="listing[country]" 
+           placeholder="USA" 
+           type="text" 
+           class="form-control"
+           required
+          />
+          <div class="valid-feedback"><i class="fa-solid fa-check"></i></div>
+          <div class="invalid-feedback">country should be valid</div> 
+       </div>
+
+       <button class="btn btn-dark add-btn mt-3 mb-3">
+         Add
+       </button>
+
+      
+  </form>
+  
+  </div>
+
+  </div> 
+  
+</body>
+
+
+
+ 
